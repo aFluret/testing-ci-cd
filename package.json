@@ -1,0 +1,20 @@
+{
+  "name": "cicd-test-project",
+  "version": "1.0.0",
+  "description": "Тестовый проект для демонстрации CI/CD с React, TypeScript, Node.js и Supabase",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend & npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "test": "npm run test --workspace=frontend && npm run test --workspace=backend",
+    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=backend"
+  },
+  "keywords": ["react", "typescript", "nodejs", "supabase", "cicd"],
+  "author": "",
+  "license": "MIT"
+}
+
